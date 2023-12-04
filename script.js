@@ -39,3 +39,24 @@ function longestStringOfStrArray(arr) {
 }
 
 console.log(longestStringOfStrArray(["a", "aaa", "aa"]));
+
+let arrResult = [];
+function stringsLongerThan(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > num) {
+      arrResult.push(arr[i]);
+    }
+  }
+  return arrResult;
+}
+
+console.log(stringsLongerThan(["say", "hello", "in", "the", "morning"], 3));
+
+function printNumRecursion(n) {
+  if (n >= 1) {
+    printNumRecursion(n - 1);
+    console.log(n);
+  }
+}
+
+printNumRecursion(4);
