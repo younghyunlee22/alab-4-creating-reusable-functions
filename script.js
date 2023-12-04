@@ -16,3 +16,26 @@ function sumOfNumArray(arr) {
 }
 
 console.log(sumOfNumArray([1, 2, 3, 4])); // 10
+
+function averageOfNumArray(arr) {
+  let sum = 0;
+  arr.forEach(function (num) {
+    sum += num;
+  });
+  return sum / arr.length;
+}
+
+console.log(averageOfNumArray([1, 2, 3, 4]));
+
+function longestStringOfStrArray(arr) {
+  let longestStr = "";
+  let numLongestStr = arr[0].length;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length > numLongestStr) {
+      longestStr = arr[i];
+    }
+    return longestStr;
+  }
+}
+
+console.log(longestStringOfStrArray(["a", "aaa", "aa"]));
